@@ -1,0 +1,45 @@
+{
+  "restaurants": [
+    {
+      "id": "trattoria",
+      "name": "Trattoria",
+      "cuisine": "Italian",
+      "address": "Strada Republicii 34"
+    },
+    {
+      "id": "casasakura",
+      "name": "Casa Sakura",
+      "cuisine": "Japanese",
+      "address": "Bd. Eroilor 1"
+    }
+  ],
+  "menuitems": [
+    {
+      "name": "Pasta Carbonara",
+      "price": "35 RON",
+      "category": "Main course",
+      "calories": "950 cal",
+      "prepTime": "PT30M",
+      "restaurantId": "trattoria",
+      "id": 1
+    },
+    {
+      "name": "Lasagna",
+      "price": "40 RON",
+      "category": "Main course",
+      "calories": "780 cal",
+      "prepTime": "PT35M",
+      "restaurantId": "trattoria",
+      "id": 2
+    },
+    {
+      "name": "California Roll",
+      "price": "50 RON",
+      "category": "Main course",
+      "calories": "600 cal",
+      "prepTime": "PT15M",
+      "restaurantId": "casasakura",
+      "id": 3
+    }
+  ]
+}

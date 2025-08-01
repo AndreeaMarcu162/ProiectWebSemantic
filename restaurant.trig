@@ -1,0 +1,85 @@
+@prefix : <http://restaurant.ro#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+:info {
+  :trattoria a schema:Restaurant ;
+    schema:name "Trattoria" ;
+    schema:servesCuisine "Italian" ;
+    schema:address "Strada Republicii 34" ;
+    schema:openingHours "Mo-Su 11:00-22:00" ;
+    schema:aggregateRating [
+      schema:ratingValue "4.5" ;
+      schema:reviewCount "100"
+    ] ;
+    schema:menu :pizza1, :carbonara1, :lasagna1 ;
+    :hasSpecialty "Lasagna" ;
+    :hasDeliveryOption "true"^^xsd:boolean .
+
+  :pizza1 a schema:MenuItem ;
+    schema:name "Pizza Margherita" ;
+    schema:price "30 RON" ;
+    schema:category "Pizza" ;
+    schema:prepTime "PT20M"^^xsd:duration ;
+    schema:nutrition [ schema:calories "850 cal" ] ;
+    schema:isVegetarian "true"^^xsd:boolean ;
+    :spiceLevel "mild" .
+
+  :carbonara1 a schema:MenuItem ;
+    schema:name "Pasta Carbonara" ;
+    schema:price "35 RON" ;
+    schema:category "Main course" ;
+    schema:prepTime "PT30M"^^xsd:duration ;
+    schema:nutrition [ schema:calories "950 cal" ] ;
+    schema:isVegetarian "false"^^xsd:boolean ;
+    :spiceLevel "medium" .
+
+  :lasagna1 a schema:MenuItem ;
+    schema:name "Lasagna" ;
+    schema:price "40 RON" ;
+    schema:category "Main course" ;
+    schema:prepTime "PT35M"^^xsd:duration ;
+    schema:nutrition [ schema:calories "780 cal" ] ;
+    schema:isVegetarian "false"^^xsd:boolean ;
+    :spiceLevel "mild" .
+
+  :sakura a schema:Restaurant ;
+    schema:name "Casa Sakura" ;
+    schema:servesCuisine "Japanese" ;
+    schema:address "Bd. Eroilor 1" ;
+    schema:openingHours "Tu-Su 12:00-23:00" ;
+    schema:aggregateRating [
+      schema:ratingValue "4.9" ;
+      schema:reviewCount "142"
+    ] ;
+    schema:menu :sushi1, :ramen1 ;
+    :hasSpecialty "Ramen" ;
+    :hasDeliveryOption "false"^^xsd:boolean .
+
+  :sushi1 a schema:MenuItem ;
+    schema:name "California Roll" ;
+    schema:price "50 RON" ;
+    schema:category "Main course" ;
+    schema:prepTime "PT15M"^^xsd:duration ;
+    schema:nutrition [ schema:calories "600 cal" ] ;
+    schema:isVegetarian "true"^^xsd:boolean ;
+    :spiceLevel "mild" .
+
+  :ramen1 a schema:MenuItem ;
+    schema:name "Tonkotsu Ramen" ;
+    schema:price "45 RON" ;
+    schema:category "Soup" ;
+    schema:prepTime "PT25M"^^xsd:duration ;
+    schema:nutrition [ schema:calories "700 cal" ] ;
+    schema:isVegetarian "false"^^xsd:boolean ;
+    :spiceLevel "hot" .
+}
+
+:geo {
+  :trattoria geo:lat "46.7704" ;
+            geo:long "23.5914" .
+
+  :sakura geo:lat "46.7712" ;
+          geo:long "23.5960" .
+}

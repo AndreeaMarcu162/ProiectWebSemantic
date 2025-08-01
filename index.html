@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proiect Web Semantic</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Proiect Semantic Web – Restaurante</h1>
+
+  <button onclick="pas1()">Buton 1 – RDF4J Tabel 1</button>
+  <button onclick="pas2()">Buton 2 – Trimite spre JSON Server</button>
+  <button onclick="pas3()">Buton 3 – Afișare din JSON Server + Dropdown</button>
+  <button onclick="pas4()">Buton 4 – Adaugă Fel de mâncare nou</button>
+  <button onclick="pas5()">Buton 5 – Afișare finală (GraphQL)</button>
+
+  <hr/>
+
+  <h3>Tabel 1 – Date RDF4J</h3>
+  <div id="tabel1"></div>
+
+  <h3>Tabel 2 – JSON Server</h3>
+  <div id="tabel2"></div>
+
+  <h3>Tabel 3 – GraphQL</h3>
+  <div id="tabel3"></div>
+
+  <hr/>
+
+  <h3>Formular – Adaugă fel de mâncare</h3>
+  <form onsubmit="return false;">
+    Nume: <input type="text" id="nume"><br>
+    Preț: <input type="text" id="pret"><br>
+    Categorie: <input type="text" id="categorie"><br>
+    Timp preparare: <input type="text" id="timp"><br>
+    Calorii: <input type="text" id="calorii"><br>
+    Restaurant:
+    <select id="dropdownRestaurante">
+      <option value="">-- selectează --</option>
+    </select><br>
+  </form>
+</body>
+</html>

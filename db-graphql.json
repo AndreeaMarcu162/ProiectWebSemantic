@@ -1,0 +1,20 @@
+{
+  "menuitems": [
+    {
+      "name": "Exemplu",
+      "price": "30 RON",
+      "category": "Main course",
+      "prepTime": "PT20M",
+      "calories": 500,
+      "restaurantId": "trattoria"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "trattoria",
+      "name": "Trattoria",
+      "cuisine": "Italian",
+      "address": "Strada Republicii 34"
+    }
+  ]
+}
